@@ -21,7 +21,7 @@ public class CrudDemoApplication {
     public CommandLineRunner commandLineRunner(StudentDAO studentDAO)//executed after the spring beans have been loaded
     {
         return runner -> {
-            //createMultipleStudents(studentDAO);
+            createMultipleStudents(studentDAO);
 			//readStudentid(studentDAO);
             //queryForStudents(studentDAO);
             //queryForStudentsByLastName(studentDAO);
@@ -29,7 +29,7 @@ public class CrudDemoApplication {
 
             // deleteStudent(studentDAO);
 
-            deleteAllStudents(studentDAO);
+            //deleteAllStudents(studentDAO);
         };
     }
 
@@ -52,7 +52,7 @@ public class CrudDemoApplication {
         // retrieve student based on the id: primary key
         int studentId = 1;
         System.out.println("Getting student with id: " + studentId);
-        Student myStudent = studentDAO.findById(studentId);
+        Student myStudent = studentDAO.findStudentid(studentId);
 
         // change first name to "John"
         System.out.println("Updating student ...");
@@ -132,9 +132,9 @@ public class CrudDemoApplication {
 //create the student object
         System.out.println("creating new student object");
 
-        Student tempStudent1 = new Student("baka", "yadav", "piyushbharti78@gmail.com");
-        Student tempStudent2 = new Student("ayushh", "sunwar", "piyushbharti78@gmail.com");
-        Student tempStudent3 = new Student("pranay", "saray", "piyushbharti78@gmail.com");
+        Student tempStudent1 = new Student("lalu", "yadav", "laluyadav78@gmail.com");
+        Student tempStudent2 = new Student("ayushh", "sunwar", "ayushsunwar765@gmail.com");
+        Student tempStudent3 = new Student("pranay", "saray", "pranyasaray82@gmail.com");
 
 
         //save the student object
